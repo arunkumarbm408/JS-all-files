@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p{
+        height: 30px;
+        width: 100vw;
+        font-weight: 900;
+        font-size: 20px;
+
+    }
+    </style>
+</head>
+<body>
+    <H1>JAVASCRIPT</H1>
+
+
+<form action="https://www.javatpoint.com/event-bubbling-and-capturing-in-javascript">  
+name:<input type="text" name="" id="name"><br>
+<p class="nameErr">NAME</p>
+email:<input type="text" name="" id="email"><br>
+<p class="emailErr"></p>
+
+pass:<input type="text" name="" id="pass"><br>
+<p class="passErr"></p>
+
+
+cPass:<input type="text" name="" id="cpass"><br>
+<p class="cpassErr"></p>
+
+<input type="reset" value="reset" >&nbsp;<input type="submit" value="submit" id="sub">
+
+</form>
+     <script src="./INDEX.JS" defer>
+
+
+var name1=document.querySelector("#name")
+var email=document.querySelector("#email")
+var pass=document.querySelector("#pass")
+var cpass=document.querySelector("#cpass")
+var sub=document.querySelector("#sub")
+// -----
+var ne=document.querySelector(".nameErr")
+var ee=document.querySelector(".emailErr")
+var pe=document.querySelector(".passErr")
+var cpe=document.querySelector(".cpassErr")
+
+sub.addEventListener("click",(event)=>{
+    event.preventDefault()
+    var nameValue=name1.value;
+    var emailValue=email.value;
+    var passValue=pass.value;
+    var cpassValue=cpass.value;
+    testName(nameValue);
+    testEmail(emailValue);
+    password(passValue);
+
+    
+
+})
+var str1="shashank"
+var str2="123"
+function testName(str)
+{
+
+    var asci=str.charCodeAt(0);
+    console.log(asci);
+    if((asci>=65&&asci<=90)||(asci>=97&&asci<=122))
+    {
+ne.innerText="name valid"
+    }
+else{
+    ne.innerText="name in valid"
+
+}
+    
+};
+
+
+
+function testEmail(e)
+{
+    if(e.includes("@")&&(e.includes(".com"))){
+        ee.innerText="email valid"
+    }
+    else{
+        ee.innerText="email INvalid"
+    }
+}
+// testEmail("34567")
+// testEmail("abc@gmail.com")
+
+
+function password(x)
+    {   
+
+        var pass=x
+        var uc=0;
+        var lc=0;
+        var sc=0;
+        var nc=0;
+
+        if(pass.length<8)
+        {
+            pe.innerText="less than 8"
+            // return 
+        }
+        for(let i of pass)
+        {
+           var asci=i.charCodeAt()
+        if(asci>=65&&asci<=90)
+        {
+            uc++
+        }
+        else if(asci>=97&&asci<=122)
+        {
+            lc++
+        }
+        else if(asci>=48&&asci<=57){
+            nc++
+        }
+        else{
+            sc++
+        }
+        }
+        console.log(uc+"uc");
+        console.log(lc+"lc");
+        console.log(sc+"sc");
+        console.log(nc+"nc");
+        if(uc<=0)
+        {
+            pe.innerText=("include ucc");
+            // return
+        }
+          if(lc<=0)
+         {
+            pe.innerText=("include lcc");
+            // return
+
+         }
+         else if(nc<=0){
+            pe.innerText=("include ncc");
+            // return
+
+         }
+         else if(sc<=0){
+            pe.innerText=("include scc");
+            // return
+         }
+         else{
+            pe.innerText=("vaild");
+            return
+
+         }
+
+    }
+    // password()
+    </script>
+</body>
+</html>

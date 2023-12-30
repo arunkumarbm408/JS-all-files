@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 70vh;
+            width: 80vw;
+            border: 2px solid red;
+            margin: 0 auto;
+        }
+        .child {
+            height: 50vh;
+            width: 50vw;
+            border: 2px solid red;
+            margin: 0 auto;
+
+        }
+        .gc {
+            margin: 0 auto;
+
+            height: 30vh;
+            width: 30vw;
+            border: 2px solid red;
+        }
+        .gc >button,.parent >button , .child >button{
+            margin: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <H1>JAVASCRIPT</H1>
+
+
+  <div class="parent">
+        <span>parent</span>
+    <div class="child">
+        <span>child</span>
+            <div class="gc">
+                <span>grandChild</span>
+        </div>
+    </div>
+</div>
+    <script>
+
+var divs=document.querySelectorAll("div")
+//console.log(btns);
+console.log(divs);
+divs[0].addEventListener("click",(event)=>{
+    // divs[0].style.background="yellow";
+    // event.target.style.background="yellow"
+    console.log("i am  a parent");
+    // console.log(event.target);
+    // console.log(event.currentTarget);
+
+},true)
+divs[1].addEventListener("click",(event)=>{
+    // divs[1].style.background="red";
+    // event.target.style.background="green"
+event.stopPropagation()
+    console.log("i am  a child");
+    // console.log(event.target);
+    // console.log(event.currentTarget);
+
+},true);
+divs[2].addEventListener("click",(event)=>{
+    // divs[2].style.background="green";
+    // event.target.style.background="red"
+
+    console.log("i am  a grand child");
+    // console.log(event.target);
+    // console.log(event.currentTarget);
+},true)
+
+
+    </script>
+</body>
+</html>
+
+

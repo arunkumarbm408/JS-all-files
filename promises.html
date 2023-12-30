@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+       let promise = new Promise(function (resolve, reject) {});
+      console.log(promise, typeof promise); 
+
+      //Promise Maker.
+      function weather() {
+      return new Promise(function (resolve, reject) {
+      resolve("Promise is RESOLVED");
+      reject("Promise is REJECTED");
+      });
+      }
+    // console.log(weather());
+      // Promise Receiver.
+      // type-1
+    //   let promise1 = weather();
+    //   console.log(promise1);
+
+      // type-2
+     // catch-> catches the rejected data
+      weather().catch((data) => {
+        console.log(data);
+      });
+
+     // then-> catches resolved data
+      weather().then((data) => {
+        console.log(data);
+      });
+
+      // setInterval() and setTimeout()
+    //   setInterval(() => {
+    //     console.log("This is setInterval");
+    //   }, 3000);
+
+    //    setTimeout(() => {
+    //      console.log("This is setTimeout");
+    //    }, 2000);
+
+    //   setInterval(() => {
+    //     setTimeout(() => {
+    //       console.log("This is Timeout inside Interval");
+    //     }, 3000);
+    //   }, 2000);
+
+    //   setTimeout(() => {
+    //     setInterval(() => {
+    //       console.log("This is Interval inside Timeout");
+    //     }, 2000);
+    //   }, 3000);
+
+      function timeout() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            // resolve("Resolved");
+            reject("Rejected");
+          }, 2000);
+        });
+      }
+
+      function onSuccess(msg) {
+        console.log(msg);
+      }
+
+      function onFailure(msg) {
+        console.log(msg);
+      }
+
+      // timeout().then(onSuccess).then(onFailure);
+      // timeout().catch(onSuccess);
+      //timeout().catch(onSuccess).catch(onFailure);
+    </script>
+  </body>
+</html>

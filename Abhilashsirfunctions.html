@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        var man="swami"
+        console.log("start");
+        function parent()
+        {
+            var car="bmw"
+            console.log(car);
+            function child()
+            {
+               var bike= "RX"
+               console.log(bike);
+               function grandchild()
+               {
+                var cycle="hero";
+                console.log(cycle);
+                console.log("****");
+                console.log(car);
+                console.log(bike);
+                console.log(man);
+               }
+              return grandchild;
+            }
+           return child;
+
+        }
+        parent()()();
+     
+
+
+        // //  console.log("start");
+// var public="ksrtc"
+
+// function parent(){
+//     var wife="kareena"
+//     var car="bmw"
+//     console.log(car);
+//     function child(){
+//         var wifeChild="tara"
+//         var bike="rx"
+//         console.log(bike);
+//         function grandChild(){
+//             var cycle="hero"
+//             var public="grand KSRTC"
+//         console.log("------");
+//             console.log(cycle);
+//             console.log(bike);
+//             console.log(car);
+//             console.log(public);
+//             console.log(.public);
+//         }
+//         return grandChild
+//     }
+    
+//     return child
+    
+// }
+// parent()()()
+
+
+// function test(){
+//     console.log(public);
+//     console.log(car);
+//     console.log("i am a test");
+// }
+// test()
+// test()
+// exp()
+// function test(x,y){
+//     console.log(x);
+//     console.log("i am a test");
+// }
+// var exp=function (){
+//     console.log("i am a demo");
+// }
+
+// test(12,17)
+// exp()
+
+
+// function test(x){
+//     x()
+//     console.log("i am a test");
+
+// }
+
+// function demo(){
+//     console.log("i am a demo");
+
+// }
+
+// test(demo)
+
+
+
+// function isEven(){
+//     for(let i=0;i<=10;i++)
+
+//     {
+//         if(i%2==0)
+//         {
+//             console.log(i+" is a even");
+//         }
+//     }
+// }
+
+// function isOdd(){
+//     for(let i=0;i<=10;i++)
+
+//     {
+//         if(i%2!=0)
+//         {
+//             console.log(i+" is a odd");
+//         }
+//     }
+// }
+
+// isEven();
+// isOdd()
+
+// function hof(cb,inf)
+// {
+//     for(let i=0;i<=10;i++)
+//     {
+//             if(cb(i))
+//             {
+//                 console.log(`${i} is a ${inf}`);
+//             }
+//     }
+// }
+// hof(Odd,"odd")
+// hof(Even,"Even")
+
+
+function Odd(x){
+    // if(x%2!=0)
+    // {
+    //     return true
+    // }
+    // else{
+    //     return false
+    // }
+    return x%2!==0
+}
+function Even(x)
+{
+    return x%2==0 
+}
+// console.log(Odd(3));
+// console.log(Even(3));
+
+// var reg=function (){}
+// var arr= x=>  x+10;
+// console.log(arr(45));
+
+
+// function foo()
+// {
+//     console.log(this);
+// }
+// foo()
+// var name1="global name"
+// var std={
+//     name1:"raju",
+//     behaviour:function(){
+//         console.log(this);
+//         // console.log(name1);
+//         // console.log(this.name1);
+//         // console.log(std.name1);
+//     },
+//     behaviour1:()=>{console.log(this);}
+    
+// }
+// // console.log(std.name1);
+// std.behaviour()
+// std.behaviour1()
+
+
+function*add()
+{ let i=0
+    while(true)
+    {
+        yield i
+        i++
+    }
+}
+
+function sub()
+{
+    for(let i=0;i<10;i++)
+    {
+        return i
+    }
+}
+console.log(sub());
+
+var ans=add()
+console.log(ans);
+console.log(ans.next().value);
+console.log(ans.next().value);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

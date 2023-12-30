@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //creating object in leteral way
+        //In java script all the data is stored in the form of objects or in the object
+        let myObj={
+             id:40,
+             name:"Uma shankar",
+             salary:30000,
+             place:'hubli',
+        }
+        console.log(myObj);
+
+        //feteching the value of individual object
+        console.log(myObj.name); //uma shankar
+        console.log(myObj.salary); //300000
+
+        //updating the value of object
+        console.log(myObj.salary=100000);
+
+        console.log(myObj);
+
+        //adding key and value pair for the existing object
+        console.log(myObj.number=995555556);
+        console.log(myObj);
+
+        //delete the key and value pair from an existing pair
+        delete myObj["place"];
+        console.log(myObj);
+          
+
+
+
+        // Why primitive is called immutable or object de-referencing
+        let num=122;
+        let num1=num;
+        num=123;
+        console.log(num1);//122
+        console.log(num);//123
+
+
+           // Why non-primitive is called mutable or object referencing
+           let obj122={
+            bottle:"1ltr",
+            color:"purple"
+           }
+
+           let obj123=obj122;//asigning the address of 122 to 123 not value
+             obj122.color="red";
+             console.log(obj122);//red
+             console.log(obj123);//red
+
+
+
+
+        // creating object in literal way
+        let myObj1={
+            name:"pratap",
+            age:101,
+            color:"godi banna sadarana mai kattu",
+            computer:{
+                ram:"4gb",
+                color:"grey",
+                color:"yellow",//updated
+                height:5
+            }
+        }
+        // fetch
+        // dot notation
+        console.log(myObj1.computer.color);
+
+        // array notation
+        console.log(myObj1["computer"]["color"]);
+
+    //    update
+    console.log(myObj1.computer.ram=100);
+    console.log(myObj1);
+
+    myObj1.computer.height=6
+    console.log(myObj1.computer.height);
+
+    // Objects Methods
+    // 1.assign
+    // 2.frreze
+    // 3.key
+    // 4.value
+    // 5.entries
+
+    // 1.assign
+    //           Assign object is used to collect all the key and value pairs of different object in a single object
+    // or
+    // Assign object is assigning all the key and value pairs in a single object
+
+    let clgObj={
+        place:"bengaluru",
+        strength:1000
+    }
+  let sclObj={
+    place:"Davanagere",
+    strength:2000
+  }
+
+  let aasgnObj=Object.assign([sclObj,clgObj])
+  console.log(aasgnObj);
+
+//   2.freeze
+// It is used to stop the updating the value of an object t some time
+sclObj.place="hubli";
+console.log(sclObj);
+
+let freezeObj=Object.freeze(sclObj);//freezed after this it cant change again it is constant
+console.log(freezeObj);
+sclObj.place="uganda";
+console.log(sclObj);
+
+Object.freeze(sclObj);
+console.log(freezeObj);
+sclObj.place="Gvt";
+console.log(sclObj);
+
+
+// 3.key
+let keyObj=Object.keys(sclObj);
+console.log(keyObj);
+
+let valueObj=Object.values(sclObj);
+console.log(valueObj);
+
+// fetching the key and value using for loop
+// for-in loop(fetching the keys of an object)
+for(let arun in sclObj) //arun is variable
+{
+    console.log(arun);
+}
+
+// 4.value
+// To get the vlues of an Object
+for(let aru in sclObj) 
+{
+    console.log(sclObj[aru]);
+}
+
+// 5.Entries
+//  when we want to convert object to arrays we need entries
+
+let entObj=Object.entries(sclObj);
+console.log(entObj);
+
+//object in function
+let object123={
+    firstname:"shubman Gill",
+    age:24,
+    details:function()
+    {
+        let place='panjab';
+        console.log(place);
+      // return place;
+    },
+};
+
+//console.log(Object.details()); undefined anta barutte
+object123.details();
+console.log(object123);
+console.log(object123.age);
+
+
+
+let myObj123={
+    things:"chair",
+    sports:function(){},
+}
+console.log(myObj123.sports());
+
+
+
+
+//How to prove var is an global
+var comp=1000;
+console.log(window.comp);//1000
+console.log(window);//window is global object
+
+let comp1=1000;
+console.log(window.comp1);//undefined
+console.log(window);
+
+const comp2=1000;
+console.log(window.comp2);//undefined
+console.log(window);
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

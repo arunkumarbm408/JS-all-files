@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let d=new Date();
+        console.log(d);//current date
+
+
+        console.log(d.getDate());
+
+        let d1=new Date(24*60*60*1000);//default 1970 jan 2
+        console.log(d1);
+
+        let d2=new Date(-24*60*60*1000);//default 1970
+        console.log(d2);
+
+        //passing string to an object
+        let d3=new Date('1999-12-03 04:34:30');
+        console.log(d3);
+
+        let now=new Date();
+        console.log(now);
+        console.log(now.getDate(),now.getDay(),now.getFullYear(),now.getTime());
+        console.log(now.getDate());
+        console.log(now.getFullYear());
+        console.log(now.getDay());
+        console.log(now.getHours());
+        console.log(now.getMonth());
+        console.log(now.getMinutes());
+        console.log(now.getSeconds());
+        console.log(now.getTime());///from 1970 jan 2 onwards till toady date miliseconds
+
+
+
+        let a=['jan','feb'];
+        console.log(a[1]);
+
+
+
+        //year month date day hours minutes seconds miliseconds
+        let date=new Date(2001,2,27,7,13,25,36,25);
+        console.log(date);
+
+        let date5=new Date(1,2001,18,7,13,25);//it will wrong ans
+        console.log(date5);
+
+
+        let date1=new Date('2019');
+        console.log(date1);
+
+        let date2=new Date(25000);//we are adding 25 seconds here 1970 on wards
+        console.log(date2);
+
+        let date3=new Date(2022,8,14);
+        console.log(date3);
+        console.log(date3.getTime());
+
+        //by default the date iz 1 and min,sec,hrs are zero
+        let date4=new Date(2022,11);
+        console.log(date4);
+
+        now.setFullYear(2024);
+        now.setMonth(3);
+        now.setDate(11);
+        now.setHours(20);
+        now.setMinutes(25);
+        now.setSeconds(40);
+        console.log(now);
+
+//    log(max(10,20,'50',40,'2'));  
+console.log('2'===2);//false
+
+//== it checks thw vlues
+///==== it checks both value & datatype
+//log(2==2)  true
+//log(2===2) true
+//log('2'==2) true
+//log('2'===2) false
+
+let today=new Date();
+console.log(today);
+
+
+    </script>
+</body>
+</html>

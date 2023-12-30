@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+ //call
+ //when we need to point the this keyword in required object
+ let std={
+    name:"arun",
+    id:120,
+ }
+ function printId(bike, job)
+ {
+    console.log(this.name, this.id+" bike is "+bike+" and  "+job);
+ }
+
+ //printId.call(std,"rx","dev")
+ printId.apply(std,["rx","dev"])
+// let ok=printId.bind(std,["suzu","helper"])
+// ok()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

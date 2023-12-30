@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0" >
+    <title>P</title>
+</head>
+<body>
+
+    <!-- <form action="" method="post">
+        <label for="name">NAME</label>
+        <input type="text" id="name">
+<br>
+        <label for="number">Number</label>
+        <input type="text" id="number">
+        <br>
+        <button>submit</button>
+    </form>
+     -->
+
+    <script>
+    
+       // console.log(undefined**undefined);
+    //     let a=[1,2,3,4,5];
+    //     for(let i=1; i<a.length; i++)
+    // {
+    //     if(a.indexOf(i)===-1){
+    //         console.log(i);
+    //     }
+    // }
+
+
+    // let a=["I","am","ARUN","KUMAR"]
+    // console.log(a);
+
+//     let pusharray=a.push("KUMAR");
+//    console.log(pusharray);
+//     console.log(a);
+
+//     let poparray=a.pop();
+//     console.log(poparray);
+//     console.log(a);
+
+
+// let unshiftarray=a.unshift("hey") ;
+// console.log(unshiftarray);
+// console.log(a);
+
+
+// let shiftarray=a.shift();
+// console.log(shiftarray);
+// console.log(a);
+
+
+
+// let slicearray=a.slice(-1);
+// console.log(slicearray);
+
+
+// let spilcearray=a.splice(1,2,"hello");
+// console.log(spilcearray);
+// console.log(a);
+
+// function* Generatorfun(){
+
+//     yield 250;
+//     yield "hello";
+//     yield 55;
+//     yield 89;
+//     let a=100;
+//     yield a
+//     return 56;
+//     yield 785;
+//     yield "hii"
+
+// }
+//  let Gen=Generatorfun();
+//  console.log(Gen.next());
+//  console.log(Gen.next());
+//  console.log(Gen.next());
+//  console.log(Gen.next());
+//  console.log(Gen);
+//  console.log(Gen.next());
+
+//  console.log(Gen.next());
+//  console.log(Gen.next());
+//  console.log(Gen);
+
+
+//Todays Topics
+//1) Some - it tells true or false
+//2) Every it tells true or false
+//3) MAP -data transformation
+//4) Filter - filteration
+//5) Reduce -
+
+//some
+// let number=[10,20,30,40,50,60];
+// let some=number.some(function(ele){
+//     return ele>40;
+// });
+// console.log(some);
+
+// let number=[10,20,30,40,50,60];
+// let Every=number.every(function(ele)
+// {
+//     return ele>10;
+// });
+// console.log(Every);
+
+
+//map
+// let number=[2001,2002,2003];
+// let map=number.map(function(ele)
+// {
+//     return ele/2001;
+// });
+// console.log(map);
+
+
+// let number=[45,56,98,-25,-56,-2000];
+// let filter=number.filter(function(ele)
+// {
+//     return ele<0;
+// });
+// console.log(filter);
+
+
+//reduce
+// let number=[1,2,3,4,558];
+// let reduce=number.reduce(function(sum,ele)
+// {
+//     return sum*ele;
+// },1);
+// console.log(reduce);
+
+//for loop
+//for in index
+//for of values
+// let a=[];
+
+// let number=[1,2,3,4,5];
+// for(let values of number)
+// {
+//     let number=values;
+//     a.push(number);
+
+// }
+// console.log(a);
+
+
+
+// let a=function(){
+//     console.log("this is function with expression");
+//   }
+
+
+
+//   console.log(a());
+
+//   let ArrFun3=()=>
+//  {
+//   let comngDay='wednesday';
+  
+//   let ystday="sunday";
+//  return comngDay;//
+
+//  };
+//  console.log(ArrFun3());
+  
+
+//  let name1=123;
+// (function demo23(wish,grid)
+// {
+//   console.log('1st IIFE hello'+wish+grid);
+
+// })
+
+// ('GM', name1);
+
+
+
+// let name12='abc';
+// (function demo23(wish,grid)
+// {
+//   console.log('2nd IIFE hello'+wish+grid);
+
+
+// })
+
+// ('GM',name12);
+
+// let obj1={
+//   id:200,
+//   update:function(id)
+//   {
+    
+//    let ok=(id)=>
+//    {
+//     this.id;
+//     console.log(id);
+//    }
+//     ok(500)
+//   }
+ 
+  
+// }
+
+// obj1.update(250);
+
+// let am=()=>{
+//     let a=0;
+//     console.log(this.a);
+// }
+// am();
+function reverseWordsInSentence(sentence) {
+  const words = sentence.split(' ');
+  const reversedWords = words.map(word => {
+    return word.split('').reverse().join('');
+  });
+  const reversedSentence = reversedWords.join(' ');
+
+  return reversedSentence;
+}
+
+const originalSentence = "Hello world";
+const reversedSentence = reverseWordsInSentence(originalSentence);
+console.log(reversedSentence); // Output: "olleH dlrow"
+
+function reverse(sent)
+{
+ let word=sent.split(' ')
+ let revwords=word.map(w=>{
+
+    return w.split('').reverse().join('');
+
+  });
+   let revsent=revwords.join(' ');
+//    return revsent;
+console.log(revsent);
+}
+
+//let sent="I AM ARU";
+// let revsent=reverse(sent);
+reverse("I AM ARU");
+// console.log(revsent);
+
+let a="i am arun"
+console.log(a.split('').reverse('').join(''));
+
+
+
+
+
+    </script>
+</body>
+</html>

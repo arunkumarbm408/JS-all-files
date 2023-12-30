@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        hi
+    </article>
+      <h1>
+        <p class="test">test</p>
+        <section class="test">section</section>
+
+
+      </h1>
+      <p class="test">hello i am para</p>
+      <article>hello i am <article>
+        helloo
+      </article></article>
+  <h1 id="demo">hii</h1>
+  <h2 id="de" style="color: aqua;">jjj</h2>
+  <h3 class="test">okl</h3>
+
+
+
+    <script>
+    // Dom Methods
+//1.getElementById
+//it return an object which element having an id as well as value as document object
+//it is used to target single html element
+
+let  elementId=document.getElementById("de");
+console.log(elementId,typeof elementId);
+
+//innerHTML(property of DOM)
+//Which displays the text by taking the behaviour of the specific tag
+//elementId.innerHTML="<h1>I want to change</h1>";
+
+
+//innerText(property of DOM)
+//it dispays text but does not take behaviour of tag
+//elementId.innerText="<h1>I too want to change</h1>";
+elementId.innerText="m11111";
+
+//styling tht html element
+elementId.style.color="red";
+elementId.style.fontSize="50px";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     //2.get elements by class method
+     //getelementsByclassName return an object of html document which targets the elements having a class of value
+     //getelementsByclassName returns in the form of html collection
+     //why bczz it targets the elements in a descendent as well as in normal way
+
+     let elementscls=document.getElementsByClassName('test');
+     console.log(elementscls, typeof elementscls);
+     console.log(Array.isArray(elementscls));
+     elementscls[2].innerHTML="chnged";
+
+     //to style the class element
+     elementscls[1].style.color='Red';
+     elementscls[0].style.backgroundColor='red';
+
+     //3.get elements by Tag name
+     //getelementby tag name return the object by the element which is having only tag
+     //It return interms of html collection bcz  it targets the document which is having multiple of same tags
+      elementsTag=document.getElementsByTagName("article");
+      console.log(elementsTag);
+    
+      elementsTag[1].style.backgroundColor="blue";
+      elementsTag[0].innerText="<h1>this is article</h1>";
+
+
+    </script>
+</body>
+</html>

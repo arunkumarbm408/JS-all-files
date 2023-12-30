@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="name1">I am ARUN</h1>
+        <aside>
+
+            <div class="mydiv">div1</div>
+            <div class="mydiv">div2</div>
+            <div class="mydiv">div3</div>
+            <div class="mydiv">div4</div>
+            <div class="mydiv">div5</div>
+            <div class="mydiv">div6</div>
+        </aside>
+        <span id="name1">i am span</span>
+
+
+
+
+    <script>
+     //BOM Browser Object Model
+    //  console.log(window)
+    //  console.log(window.console);
+    //  //SCreen
+    //  console.log(window.screen);
+    //  console.log(window.screen.height);
+    //  console.log(window.screen.availHeight);
+    //  console.log(window.screen.width);
+    //  console.log(window.screen.availWidth);
+    //  console.log(window.screen.colorDepth);
+
+    //  //Location
+    //  console.log(window.location);
+    // // onsole.log(wincdow.location.reload());
+
+    // //setInterval
+    // // setInterval(()=>{
+    // //     console.log(window.location.reload());
+    // // },6000)
+
+    // console.log(window.navigator);
+
+    // window.navigator.geolocation.getCurrentPosition((x)=>{
+    //     console.log(x);
+    // })
+
+    // console.log(window.history);
+
+    // console.log(window.navigator.connection.effectiveType);
+    // console.log(navigator.onLine);
+
+    //DOM
+    //5 methods
+    //1)getelementsById
+    //2)getelementsByclassname
+    //3)getelementsBytagName
+    //4)Queryselector
+    //5)QUeryselectorAll
+
+
+//getelementsbyID
+// var h=document.getElementById("name1")
+// console.log(h);
+// h.style.background="red";
+
+//getelementsbyClassname
+var h=document.getElementsByClassName("name1")
+console.log(h);//length zero bcz no classname in that name1
+
+var h1=document.getElementsByClassName("mydiv")
+console.log(h1);
+// h1.style.background="green"//not possible
+
+h1[0].style.background="green";//always go through index values
+console.log(h1.length);
+for(let i=0;i<h1.length;i++)
+{
+    if(i%2==0){
+        h1[i].style.border="3px solid black"
+    }
+    else{
+        h1[i].style.border="2px solid red";
+    }
+}
+
+//h1.push(100)  its not possible bcz its not an array
+console.log(Array.isArray(h1));
+
+//getelementsbyTagname
+var h=document.getElementsByTagName("div");
+console.log(h);
+//h.style.color="blue";//not possible
+h[0].style.color="blue";
+
+
+//querySelector
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

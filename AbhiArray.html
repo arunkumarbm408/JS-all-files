@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+//   let arr=[];
+//    let num={}
+//    console.log(Array.isArray(arr));//it accepts only oe argument
+//    console.log(Array.isArray(num));//it accepts only oe argument
+
+//    arr[0]=20;
+//    arr[1]=21;
+//    arr[3]=30;
+//    console.log(arr);
+   
+
+
+
+//    //storing values in an array
+//    var aa=[];
+// //    var data=2
+//    for(let i=0;i<9;i++)
+//    {
+//      aa[i]=i+2
+    
+// // dat++
+//    }
+//    console.log(aa);
+
+
+//    //Array methods
+//    //1.push
+//    var arrb=[1,2,3,4]
+//    console.log(arrb);
+
+//    arrb.push(5,6,7,8);
+//    console.log(arrb);
+
+//  //pop
+//    arrb.pop()
+//    console.log(arrb);
+//    //using for loop
+//    for(let i=0;i<4;i++)
+//    {
+//     arrb.pop()
+//    }
+// console.log(arrb);
+
+// var abc=[]
+// for(let i=0;i<4;i++)
+//    {
+//    abc.push( arrb.pop())
+//    }
+// console.log(abc);
+
+
+
+
+
+//    //unshift
+//    arrb.unshift(10,20,30);
+//    console.log(arrb);
+
+//    //shift
+//    arrb.shift();
+//    console.log(arrb);
+
+// //slice
+// arrb.slice(2,6);
+// console.log(arrb.slice(2,6));
+
+
+
+// //reverse
+
+// var myArr="yes am arun kumar"
+// console.log(myArr.split('').reverse().join(' '));
+
+
+// //concat
+// let drr=[]
+// let brr=["hi", "hello"];
+// let crr=["hey"]
+// console.log(drr.concat(arr,brr,crr));
+// console.log(arr.length);
+
+// //includes==>gives boolean values
+// let x=[53,0,8,1,52,5,60 ]
+// console.log(x.includes(2));
+// console.log(x.includes("hey"));
+// console.log(x.length);
+
+// //sort
+// var m=['a','x','q','b','f']
+// console.log(m.sort());
+// console.log(x.sort());//it wont work bcz it considers ascii
+// console.log(x.sort((x,y)=>{return x-y}));//to get ascending
+// console.log(x.sort((x,y)=>{return y-x}));// to get desecending
+
+// //flat
+// var a=[1,2,3,[2,5,[5,6,[8,[999]]]]]
+// console.log(a.flat[90]);
+
+// //prime or not
+// function isPrime(x)
+// {
+// let num=x;
+// let flag=true;
+// for(let i=2;i<num;i++)
+// {
+//     if(num%i==0)
+//     {
+//         flag=false;
+//     }
+// }
+// if(flag==true)
+// {
+//     console.log("prime number");
+// }
+// else
+// {
+//     console.log("Not prime");
+// }
+// }
+
+// //for Each method
+// let sun=[1,2,3,5,6]
+// let n=sun.length+1
+// let sum=(n*(n+1))/2
+// let arrSum=sun.reduce((ac,iv)=>ac+iv)
+// console.log(sum -arrSum);
+// console.log(sum);
+
+ 
+// let sun1=sun.forEach((ele,ind,arr)=>{
+//     if(ele%2==0)
+//     {
+//         console.log(ele+" It is even");
+//     }
+// })
+
+//filter
+// let sun2=[1,2,4,5,6]
+// let sun3=sun2.filter((ele)=>  ele>4);
+// console.log(sun3);
+
+//map
+let arr1=[1,2,3,4]
+let ans=arr1.map((ele,ind)=>{
+    return ele>2;
+})
+console.log(ans);
+
+
+
+
+
+
+
+//reduce
+// let arr=['a','b','c','d','e']
+// let ans=arr.reduce((iv,ele)=>{
+//     return iv+ele;
+// },"hey",'hello');//initial value does not take two arguments
+// console.log(an
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let arr2=['a','b','c','d','e']
+// let ans1=arr.reduceRight((iv,ele)=>{//it will take from right side
+//     return iv+ele;
+// },"hey");//initial value does not take two arguments
+// console.log(ans1);
+
+// let ans3=arr.map((ele)=>{ return 'hi'+ele})
+// console.log(ans3);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

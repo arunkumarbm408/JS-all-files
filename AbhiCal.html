@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+ <div>
+    <input type="text"  id="ans">
+ </div>
+ <div>
+    <input type="button" value="1" onclick="ans.value=ans.value+1">
+    <input type="button" value="2"  onclick="ans.value+=2">
+    <input type="button" value="3" onclick="ans.value+=3">
+    <input type="button" value="+"   onclick="ans.value+='+'">
+ </div>
+ <div>
+    <input type="button" value="4"  onclick="ans.value+=4">
+    <input type="button" value="5"  onclick="ans.value+=5">
+    <input type="button" value="6"  onclick="ans.value+=6">
+    <input type="button" value="-"  onclick="ans.value+='-'">
+ </div> 
+ <div>
+    <input type="button" value="7"  onclick="ans.value+=7">
+    <input type="button" value="8"  onclick="ans.value+=8">
+    <input type="button" value="9"  onclick="ans.value+=9">
+    <input type="button" value="/"  onclick="ans.value+='/'">
+ </div>
+ <div>
+    <input type="button" value="0"  onclick="ans.value+=0">
+    <input type="button" value="."  onclick="ans.value+='.'">
+    <input type="button" value="*"  onclick="ans.value+='*'">
+    <input type="button" value="="  onclick="ans.value=eval(ans.value)">
+ </div>
+ <input type="button" value="AC"  onclick="ans.value=''">
+ <input type="button" value="sin"  onclick="ans.value=Math.sin(ans.value)">
+ <input type="button" value="de"  onclick="ans.value=ans.value.slice(0,-1)">
+ <input type="button" value="="  onclick="ans.value=eval(ans.value)">
+</div>
+
+<!-- <div> 
+    <button id="increase">increment</button>
+    <h1 id="ans">0</h1>
+    <button id="decrease">decrement</button>
+
+</div> -->
+<!-- 
+<div>
+    <input type="text" id="qns">:
+    <input type="text" id="qns">:
+    <input type="text" id="qns">:
+</div>
+<br>
+<aside>
+    <h2>remaining time</h2>
+    <input type="text" id="ans">:
+    <input type="text" id="ans">:
+    <input type="text" id="ans">:
+</aside>
+<button>set</button>
+    <script src="./index.js">
+        var time=document.querySelector("#time");
+var monthArr=["jan","feb","march","april","may","june","july","august","sep","oct","nov","dec"]
+
+function dispalyDate()
+{
+    var dateObj=new Date()
+
+// console.log(dateObj);
+var dayarr=[]
+var year =dateObj.getFullYear()
+var month =dateObj.getMonth()
+var date =dateObj.getDate()
+var day =dateObj.getDay()
+var hrs =dateObj.getHours()
+var min =dateObj.getMinutes()
+var sec =dateObj.getSeconds()
+var msec =dateObj.getMilliseconds()
+// console.log(`${year}/${monthArr[month]}/${date} the day is ${hrs}:${min}:${sec}:${msec}` );
+time.innerText=`${year}/${monthArr[month]}/${date} the day is ${hrs}:${min}:${sec}:${msec}`
+
+}
+
+
+
+// console.log(time);
+// setInterval(()=>{
+//     dispalyDate()
+// },1)
+
+var d=new Date(2020,1,23,13,20,6,789)
+// d.setFullYear(2021)
+
+var year =d.getFullYear()
+var month =d.getMonth()
+var date =d.getDate()
+var day =d.getDay()
+var hrs =d.getHours()
+var min =d.getMinutes()
+var sec =d.getSeconds()
+var msec =d.getMilliseconds()
+// console.log(`${year}/${monthArr[month]}/${date} the day is ${hrs}:${min}:${sec}:${msec}` );
+
+// console.log(d.getFullYear());
+
+// console.log(Math.PI);
+// console.log(Math.E);
+// console.log(Math.LN10);
+// console.log(Math.sin(0));
+// console.log(Math.cos(0));
+// console.log(Math.tan(0));
+// console.log(10/3);
+// console.log(Math.ceil(12.99));
+// console.log(Math.ceil(12.01));
+// console.log(Math.floor(12.01));
+// console.log(Math.floor(12.991));
+
+// console.log(Math.round(12.99));
+// console.log(Math.round(12.09));
+// console.log(Math.pow(2,3));
+// console.log(Math.sqrt(4));
+// console.log(Math.cbrt(27));
+// console.log(Math.random());
+// console.log(Math.min(12,6,87,46,98));
+// console.log(Math.max(12,6,87,46,98));
+
+
+// console.log(7+87);
+// console.log("67+87");
+// console.log(eval("67+87"));
+
+// var str="abcd"
+// console.log(str.slice(-1));
+// var incre=document.querySelector("#increase")
+// var decre=document.querySelector("#decrease")
+// var ans=document.querySelector("#ans")
+// console.log(ans.innerText);
+// var num=Number(ans.innerText)
+// console.log(typeof num);
+
+// incre.addEventListener("click",()=>{
+
+//     num++
+//     if(num>0)
+//     {
+//         document.body.style.background="green"
+//     }
+// ans.innerText=num;
+
+// })
+
+// decre.addEventListener("click",()=>{
+
+    
+//     num--
+//     if(num<0)
+//     {
+//         document.body.style.background="red"
+//     }
+// ans.innerText=num;
+
+// })
+
+var qns=document.querySelectorAll("qns")
+var ans=document.querySelectorAll("ans");
+var btn=document.querySelector("button");
+
+btn.addEventListener("click",()=>{
+    var hrs=qns[0].value
+    var min=qns[1].value
+    var sec=qns[2].value
+
+
+
+
+})
+var hr=12;
+var min=56;
+var sec=67;
+
+
+
+function alarm()
+{
+       if(min>60)
+       {
+        hr++
+        min=0; 
+       }
+       if(sec>60)
+       {
+        min++
+       }
+} -->
+    </script>
+</body>
+</html>
